@@ -6,7 +6,7 @@ O exemplo foi projetado para ser usado em uma aula prática sobre esse tipo de a
  
 O objetivo é permitir que o aluno tenha um primeiro contato prático com arquiteturas Publish/Subscribe e com tecnologias usadas na implementação das mesmas. Especificamente, usaremos o sistema  [RabbitMQ](https://www.rabbitmq.com) como *broker* (ou seja um canal/meio de comunicação) para assinatura, publicação e armazenamento de eventos.
 
-# Vídeo Explicativo
+# Vídeo do projeto
 
 O [Eduardo Silva](https://github.com/Eduardo-J-S), monitor da turma de 20242 de Desenvolvimento de Sistemas Web II, criou um vídeo explicando o funcionamento do projeto. O vídeo está disponível em [https://drive.google.com/file/d/1GV5sBCnlb660hCjzrC_0HojCTeNMBQIH/view?usp=drive_link](https://drive.google.com/file/d/1GV5sBCnlb660hCjzrC_0HojCTeNMBQIH/view?usp=drive_link)
  
