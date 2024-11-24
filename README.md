@@ -122,6 +122,16 @@ Com o JSON preenchido, clique na fila na qual deseja inserir a mensagem, que nes
 Na sessão `Publish message`, copie o JSON no campo `Payload`. Em seguida, clique em `publish message`
  
 ![publish_message](./images/publish_message.png)
+
+#### Atualização para Evitar Problema de Consumo Parcial nas Filas `contact` e `shipping`
+
+- Nota Importante: Ao subir o serviço `order`, ele deve enviar o conteúdo da fila `orders` para os tópicos `contact` e `shipping`. No entanto, pode ocorrer um problema em que apenas o primeiro tópico criado recebe o conteúdo da fila `orders`. Vale ressaltar que isso só ocorre na primeira vez que os tópicos são criados e essa correção é para evitar que ao final do tutorial pareça que não obteve sucesso. Para garantir que ambos os tópicos recebam as mensagens, siga os passos adicionais abaixo:
+
+Após criar a fila `orders`, crie também a fila `shipping` diretamente na interface gráfica do RabbitMQ. Vá até a guia "Queues" e, na seção "Add a new queue", preencha o campo `name` com `shipping` e clique em "Add queue".
+
+![create_queue](./images/create_shipping.png)
+
+Agora, com as filas orders e shipping já criadas, quando o serviço order for iniciado, ele conseguirá enviar as mensagens corretamente tanto para contact quanto para shipping.
  
 ## Passo 2: Subindo os Serviços
  
